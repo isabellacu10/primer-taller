@@ -1,0 +1,67 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package javaapplication4;
+
+import java.security.PublicKey;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author UIS
+ */
+public class JavaApplication4 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       
+        sueldo();
+    }
+    
+    public static void promedio() {
+        int n1= Integer.parseInt(JOptionPane.showInputDialog("ingrese el numero"));
+        int n2= Integer.parseInt(JOptionPane.showInputDialog("ingrese el numero"));
+        int n3= Integer.parseInt(JOptionPane.showInputDialog("ingrese el numero"));
+        int n4= Integer.parseInt(JOptionPane.showInputDialog("ingrese el numero"));
+        int n5= Integer.parseInt(JOptionPane.showInputDialog("ingrese el numero"));
+        
+        JOptionPane.showInternalMessageDialog(null, "el promedio es : "+(n1+n2+n3+n4)/5);
+        
+        
+    }
+    public static void notas() {
+        float n1= Float.parseFloat(JOptionPane.showInputDialog("ingrese la nota de parcial"));
+        float n2= Float.parseFloat(JOptionPane.showInputDialog("ingrese la nota de quizes"));
+        float n3= Float.parseFloat(JOptionPane.showInputDialog("ingrese la nota del trabajo final"));
+        
+        JOptionPane.showInternalMessageDialog(null, "el ponderado de su nota final es de : "+((n1*0.55)+(n2*0.30)+(n3*0.15)));
+        
+        
+        
+    }
+    public static void sueldo() {
+        Scanner cliente = new Scanner (System.in);
+        
+         String nombre = JOptionPane.showInputDialog("ingrese el nombre del empleado");
+         int horas = Integer.parseInt(JOptionPane.showInputDialog("ingrese las horas trabajadas"));
+         float pago = Float.parseFloat(JOptionPane.showInputDialog("ingrese el valor por hora"));
+         JOptionPane.showInternalMessageDialog(null, "el empleado "+nombre+" trabajo "+horas+" horas su pago es de : "+pago*horas);
+         
+          
+    }
+    public static void numero() {
+        int n1 = Integer.parseInt(JOptionPane.showInputDialog("ingrese en numero"));
+        int r = n1%2;
+        if (r==1){
+            JOptionPane.showMessageDialog(null, "su nuemro es impar");
+        }else{
+            JOptionPane.showInternalMessageDialog(null, "su numero es par");
+        }
+        
+       
+    }
+}
