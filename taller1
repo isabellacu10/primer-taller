@@ -57,11 +57,49 @@ public class JavaApplication4 {
         int n1 = Integer.parseInt(JOptionPane.showInputDialog("ingrese en numero"));
         int r = n1%2;
         if (r==1){
-            JOptionPane.showMessageDialog(null, "su nuemro es impar");
+            JOptionPane.showMessageDialog(null, "su numero es impar");
         }else{
             JOptionPane.showInternalMessageDialog(null, "su numero es par");
         }
+    
         
        
+    }
+    public static void sueldo() {
+        Scanner cliente = new Scanner (System.in);
+        
+         String nombre = JOptionPane.showInputDialog("ingrese el nombre del empleado");
+         int horas = Integer.parseInt(JOptionPane.showInputDialog("ingrese las horas trabajadas"));
+         float pago = Float.parseFloat(JOptionPane.showInputDialog("ingrese el valor por hora"));
+         JOptionPane.showInternalMessageDialog(null, "el empleado "+nombre+" trabajo "+horas+" horas su pago es de : "+pago*horas);
+         
+          
+    }
+    public static void numero() {
+        int n1 = Integer.parseInt(JOptionPane.showInputDialog("ingrese en numero"));
+        int r = n1%2;
+        if (r==1){
+            JOptionPane.showMessageDialog(null, "su numero es impar");
+        }else{
+            JOptionPane.showInternalMessageDialog(null, "su numero es par");
+        }
+    }
+    
+    public static void suma() {
+        int n1 = Integer.parseInt(JOptionPane.showInputDialog("ingrese su numero"));
+        int n2 = Integer.parseInt(JOptionPane.showInputDialog("ingrese su numero"));
+        int n3 = Integer.parseInt(JOptionPane.showInputDialog("ingrese su numero"));
+        if (n1==n2+n3){
+            JOptionPane.showInternalMessageDialog(null, "el numero "+n1+" es el resultado de la suma de "+n2+" y "+n3);
+        }else if(n2==n1+n3){
+            JOptionPane.showInternalMessageDialog(null, "el numero "+n2+" es el resultadp de la suma de "+n1+" y "+n3);
+        }else if(n3==n1+n2){
+            JOptionPane.showInternalMessageDialog(null, "el numero "+n3+" es el resultadp de la suma de "+n1+" y "+n2); 
+        }else{
+            JOptionPane.showMessageDialog(null, "Ninguno de los números es la suma de los otros dos.");
+            
+        }
+
+
     }
 }
